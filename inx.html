@@ -1,0 +1,243 @@
+<html>
+   <head>
+      <style>
+         head, body{
+            background: #000000;
+         }
+         p1{
+            color: #66ff66;
+            font-size: 150px;
+            font-family: 'retro';
+            padding-left: 25%;
+            top: 50px;
+            letter-spacing: 1px;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+         }
+         p2{
+            color: #66ff55;
+            font-size: 30px;
+            font-family: 'retro';
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+         }
+         p10{
+            color: #66ff55;
+            font-size: 50px;
+            font-family: 'retro';
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+         }
+         p4{
+            color: #66ff66;
+            font-size: 50px;
+            font-family: 'retro';
+            padding-left: 43.5%;
+            top: 50px;
+            letter-spacing: 1px;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+         }
+         p9{
+            color: #66ff66;
+            font-size: 30px;
+            font-family: 'retro';
+            padding-left: 30%;
+            top: 50px;
+            letter-spacing: 1px;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+         }
+         @font-face {
+            font-family: retro;
+            src: url(retro.ttf);
+         }
+         .test{
+            text-align: center;
+         }
+         .stbtn,.setbtn,.ntr{
+            border: none;
+            background: transparent;
+            outline: none;
+            transition: 800ms;
+         }
+         .stbtn:hover,.setbtn:hover,.ntr:hover{
+            letter-spacing: 10px ;
+            cursor: pointer;
+         }
+         .nametxt{
+            font-size: 50px;
+            color: lightgreen;
+            border: 3px solid #66FF55;
+            background: transparent;
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            position: relative;
+            top: 50%;
+            left: 35%;
+            border-radius:100px;
+         }
+         .nametxt:focus{
+            outline: none;
+         }
+
+      </style>
+   </head>
+   <body>
+      <div id="wrn">
+         <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+         <p4>WARNING</p4>
+         <br><br>
+         <p9>The following game may induce epilepsy.</p9>
+         <br>
+         <p9 style="padding-left:39.7%">Play at your own risk.</p9>
+         <div class="test">
+            <br>
+            <button class="stbtn" onClick="next();"value="Start"><p2>CONTINUE...</p2></button>
+            <br><br>
+         </div>
+         <br>
+      </div>
+
+      <div id="scrn1" style="display: none">
+         <br><br><br><br><br><br><br><br><br><br><br><br>
+         <p1><span style="padding-left:5%;" id="wname"></span></p1>
+         <br><br>
+         <div class="test">
+            <button class="stbtn" onClick="next1();"><p10>Start Game</p10></button>
+            <br><br>
+            <button class="setbtn"><p10>Settings</p10></button>
+         </div>
+         <br>
+      </div>
+
+      <div id="scrn2" style="display: none;">
+         <br><br><br><br><br><br>
+         <div id="nameshow" style="display: none;padding-left:10%;">
+            <p10>Your name is  "<p10><span id="namediv"></span></p10>" (you cannot change this later)</p10>
+         </div>
+         <br><br><br><br><br><br><br><br>
+         <input type="text" id="nametxt" class="nametxt"maxlength="10"><br><br>
+         <button  id="entrnme"  style="padding-left:39.7%"class="stbtn"onClick="entername(), this.style.display='none'"><p10>Enter Name</p10></button>
+         <br>
+         <div id="sub" style="display:none;">
+            <button style="padding-left:41%" class="stbtn" id="cont"onClick="startGame();"><p10>Continue</p10></button><br>
+            <button style="padding-left:34.7%" class="stbtn" id="cont"onClick="window.location.reload();"><p10>Choose Another Name</p10></button>
+         </div>
+      </div>
+
+      <div id="mainG1" style="display: none">
+         <p10>My name is <span id="namediv1"></span></p10><br>
+         <p10>I know that.</p10><br>
+         <p10>But why do I forget?</p10>
+      </div>
+
+
+      <script>
+         var snd1 = new Audio("mainambient.mp3");
+         var snd2 = new Audio("NGGUU.mp3");
+         var snd3 = new Audio("kekw.mp3");
+         function bobux(){
+            snd2.play();
+         }
+         function kekw(){
+            snd3.play();
+            setTimeout(
+               function() {
+                  window.location.reload();
+               }, 8000);
+
+         }
+         function fadein1(){
+            setTimeout(
+               function() {
+                  document.getElementById("mainG1").style.display="block";
+               }, 1000);
+         }
+
+         document.getElementById("wname").textContent="-AMNESIA-";
+
+         function next(){
+            document.getElementById("wrn").style.display="none";
+            document.getElementById("scrn1").style.display="block";
+            snd1.play();
+            snd1.volume=0.25;
+            snd1.loop=true;
+            var targetelement = document.documentElement;
+            if (targetelement.requestFullscreen)
+            {
+               targetelement.requestFullscreen();
+            }
+            if (targetelement.mozRequestFullScreen)
+            {
+               targetelement.mozRequestFullScreen();
+            }
+            if (targetelement.msRequestFullscreen)
+            {
+               targetelement.msRequestFullscreen();
+            }
+         }  
+
+         function next1(){
+            document.getElementById("scrn1").style.display="none";
+            document.getElementById("scrn2").style.display="block";
+         }
+         var textInputElement = document.getElementById('nametxt');
+         nameDivElement = document.getElementById('namediv');
+
+
+         function entername() {
+            setTimeout(
+               function() {
+                  var text = textInputElement.value;
+                  nameDivElement.innerHTML = text;
+                  document.getElementById('namediv1').innerHTML= text;
+                  if(text=="kekw"){
+                     kekw();
+                  }
+                  if(text=="bobux"){
+                     bobux();
+                     setTimeout(
+                        function() {
+                           window.location.reload();
+                        }, 10065);
+
+                  }if(text!="bobux"|"kekw"){
+                     document.getElementById("sub").style.display="block";
+                     document.getElementById("nameshow").style.display="block";
+                     document.getElementById("nametxt").disabled = true;
+                     document.getElementById("entrnme").disabled = true;
+                     document.getElementById("nametxt").style.display="none";
+                     document.getElementById("entrnme").style.display="none";
+
+                  } 
+
+               }, 1500);
+         } 
+
+
+         function startGame(){
+            snd1.pause();
+            document.getElementById("sub").style.display="none";
+            document.getElementById("scrn2").style.display="none";
+            fadein1();
+         }
+      </script>
+   </body>
+</html>
