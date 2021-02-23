@@ -173,10 +173,11 @@
 
 
       <script>
+
          window.onload= function(){
             localStorage.getItem(document.getElementById("nametxt").value);
             let name = localStorage.getItem('name');
-
+console.log('name');
             if(localStorage.getItem('name')==null|localStorage.getItem('name')==""){
                document.getElementById("block1").style.display = "none";
                document.getElementById("block1").disabled = true;
@@ -337,6 +338,7 @@
                }, 2000); 
             //startgamefr();
          }
+
       </script>
 
    </body>
