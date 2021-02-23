@@ -1,2 +1,2 @@
-Amnesia's repo
+Amnesia's repo:
 https://lieutenantlark.github.io/Amnesia-PA/
