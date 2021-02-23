@@ -182,14 +182,14 @@
             localStorage.getItem(document.getElementById("nametxt").value);
             let name = localStorage.getItem('name');
             console.log(localStorage.getItem('name'));
-            if(localStorage.getItem('name')==null||localStorage.getItem('name')==""||localStorage.getItem('name')==undefined){
+            if(localStorage.getItem('name')==null||localStorage.getItem('name')==""){
                document.getElementById("block1").style.display = "none";
                document.getElementById("block1").disabled = true;
                document.getElementById("block2").style.display = "none";
                document.getElementById("block2").disabled = true;
                document.getElementById("s1").style.display = "inline-block";
 
-            }if(localStorage.getItem('name')!=null||localStorage.getItem('name')==""||localStorage.getItem('name')==undefined){
+            }if(localStorage.getItem('name')!=null||localStorage.getItem('name')==""){
               document.getElementById("s1").style.display = "none";
             }
          }
