@@ -126,7 +126,7 @@
             <br>
          </div>
          <div style="text-align: center;"class="test">
-            <button class="stbtn" onClick="next1();"><p10>Start Game</p10></button>
+            <button class="stbtn" id="s1"onClick="next1();"><p10>Start Game</p10></button>
             <br><br>
             <button class="setbtn" style="disabled display: none;"id="block1"onClick = "Continue();"><p10>Continue</p10></button><br><br>
             <button class="setbtn" style="disabled display: none;"id="block2"onClick = "reset();"><p10>Reset Game</p10></button>
@@ -140,16 +140,20 @@
             <p10>Your name is  "<p10><span id="namediv"></span></p10>" (you cannot change this later)</p10>
          </div>
          <br><br><br><br><br><br><br><br>
-         <input style="text-align: center;"type="text" id="nametxt" class="nametxt"maxlength="11"><br><br>
-         <button  id="entrnme"  style="text-align: center;" class="stbtn"onClick="entername(), this.style.display='none'"><p10>Enter Name</p10></button>
-         <br>
-         <div id="sub" style="display:none;">
+         <div style="text-align: center">
+            <input style="text-align: center;"type="text" id="nametxt" class="nametxt"maxlength="11"><br><br>
+         </div>
+         <div style="text-align: center">
+            <button  id="entrnme"  style="text-align: center;" class="stbtn"onClick="entername(),this.style.display='none'"><p10>Enter Name</p10></button>
+            <br>
+         </div>
+         <div id="sub" style="display:none; text-align:center">
             <button style="text-align: center;" class="stbtn" id="cont"onClick="startGame();"><p10>Continue</p10></button><br>
             <button style="text-align: center;" class="stbtn" id="cont"onClick="window.location.reload();"><p10>Choose Another Name</p10></button>
          </div>
       </div>
 
-      <div id="mainG1" style="display: none">
+      <div id="mainG1" style="display: none; text-align: center;">
          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
          <div id = "sc1"style="text-align: center;">
@@ -183,9 +187,10 @@
                document.getElementById("block1").disabled = true;
                document.getElementById("block2").style.display = "none";
                document.getElementById("block2").disabled = true;
+               document.getElementById("s1").style.display = "inline-block";
 
             }if(localStorage.getItem('name')!=null){
-              
+              document.getElementById("s1").style.display = "none";
             }
          }
          document.getElementById("wname").textContent="AMNESIA";
@@ -220,7 +225,7 @@
                }, 1000);
          }
          function next(){
-            
+
 
             document.getElementById("wrn").style.display="none";
             document.getElementById("scrn1").style.display="block";
@@ -300,15 +305,16 @@
             startGametrue();
 
          }
-                  function reset(){
-           setTimeout(
+         function reset(){
+            setTimeout(
                function() {
+document.getElementById("s1").style.display = "inline-block";
                   localStorage.removeItem('name');
-               document.getElementById("block1").style.display = "none";
-               document.getElementById("block1").disabled = true;
-               document.getElementById("block2").style.display = "none";
-               document.getElementById("block2").disabled = true;
-               }, 1500);
+                  document.getElementById("block1").style.display = "none";
+                  document.getElementById("block1").disabled = true;
+                  document.getElementById("block2").style.display = "none";
+                  document.getElementById("block2").disabled = true;
+               }, 10);
          }
          function back(){
             window.location.reload();
