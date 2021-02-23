@@ -121,7 +121,6 @@
 
       <div id="scrn1" style="display: none; flex-direction: column;">
          <br><br><br><br><br><br><br><br><br><br><br><br>
-         <button onclick="localStorage.removeItem('name');">clear storage hax</button>
          <div style="text-align: center;">
             <p1><span  id="wname"></span></p1>
             <br>
@@ -129,7 +128,8 @@
          <div style="text-align: center;"class="test">
             <button class="stbtn" onClick="next1();"><p10>Start Game</p10></button>
             <br><br>
-            <button class="setbtn" id="block1"onClick = "Continue();"><p10>Continue</p10></button>
+            <button class="setbtn" style="disabled display: none;"id="block1"onClick = "Continue();"><p10>Continue</p10></button><br><br>
+            <button class="setbtn" style="disabled display: none;"id="block2"onClick = "reset();"><p10>Reset Game</p10></button>
          </div>
          <br>
       </div>
@@ -177,129 +177,164 @@
             localStorage.getItem(document.getElementById("nametxt").value);
             let name = localStorage.getItem('name');
 
-            
-}
-            document.getElementById("wname").textContent="AMNESIA";
-            var snd1 = new Audio("mainambient.mp3");
-            var snd2 = new Audio("NGGUU.mp3");
-            var snd3 = new Audio("kekw.mp3");
-            function bobux(){
-               snd2.play();
-               localStorage.removeItem('name');
-            }
-            function kekw(){
-               snd3.play();
-               localStorage.removeItem('name');
-               setTimeout(
-                  function() {
-                     window.location.reload();
-                  }, 8000);
-
-            }
-            function fadein1(){
-               setTimeout(
-                  function() {
-                     document.getElementById("mainG1").style.display="block";
-                  }, 1000);
-            }
-            function next(){
-            if(localStorage.getItem('name')==""){
+            if(localStorage.getItem('name')==null|localStorage.getItem('name')==""){
                document.getElementById("block1").style.display = "none";
                document.getElementById("block1").disabled = true;
-               
+               document.getElementById("block2").style.display = "none";
+               document.getElementById("block2").disabled = true;
+
             }if(localStorage.getItem('name')!=""){
                document.getElementById("block1").style.display = "inline-block";
                document.getElementById("block1").disabled = false;
+                 document.getElementById("block2").style.display = "inline-block";
+               document.getElementById("block2").disabled = false;
             }
+         }
+         document.getElementById("wname").textContent="AMNESIA";
+         var snd1 = new Audio("mainambient.mp3");
+         var snd2 = new Audio("NGGUU.mp3");
+         var snd3 = new Audio("kekw.mp3");
+         var snd4 = new Audio("FDB.mp3");
+
+
+         function bobux(){
+            snd2.play();
+            localStorage.removeItem('name');
+         }
+         function FDB(){
+            snd4.play();
+            snd4.volume=1;
+            localStorage.removeItem('name');
+         }
+         function kekw(){
+            snd3.play();
+            localStorage.removeItem('name');
+            setTimeout(
+               function() {
+                  window.location.reload();
+               }, 8000);
+
+         }
+         function fadein1(){
+            setTimeout(
+               function() {
+                  document.getElementById("mainG1").style.display="block";
+               }, 1000);
+         }
+         function next(){
             
-               document.getElementById("wrn").style.display="none";
-               document.getElementById("scrn1").style.display="block";
-               snd1.play();
-               snd1.volume=0.25;
-               snd1.loop=true;
-               var targetelement = document.documentElement;
-               if (targetelement.requestFullscreen)
-               {
-                  targetelement.requestFullscreen();
-               }
-               if (targetelement.mozRequestFullScreen)
-               {
-                  targetelement.mozRequestFullScreen();
-               }
-               if (targetelement.msRequestFullscreen)
-               {
-                  targetelement.msRequestFullscreen();
-               }
-            }  
-            function next1(){
-               document.getElementById("scrn1").style.display="none";
-               document.getElementById("scrn2").style.display="block";
+
+            document.getElementById("wrn").style.display="none";
+            document.getElementById("scrn1").style.display="block";
+            snd1.play();
+            snd1.volume=0.25;
+            snd1.loop=true;
+            var targetelement = document.documentElement;
+            if (targetelement.requestFullscreen)
+            {
+               targetelement.requestFullscreen();
             }
-            var textInputElement = document.getElementById('nametxt');
-            nameDivElement = document.getElementById('namediv');
-            function entername() {
-               setTimeout(
-                  function() {
-                     localStorage.setItem('name',document.getElementById("nametxt").value);
-                     var text = textInputElement.value;
-                     nameDivElement.innerHTML = text;
-                     document.getElementById('namediv1').innerHTML= text;
-                     if(text=="kekw"){
-                        kekw();
-                     }
-                     if(text==""){
-                        setTimeout(
-                           function() {
-                              back();
-                           }, 1000);
-                     }
-                     if(text=="bobux"){
-                        bobux();
-                        setTimeout(
-                           function() {
-                              window.location.reload();
-                           }, 10065);
-                     }if(text!="bobux"|"kekw"){
-                        document.getElementById("sub").style.display="block";
-                        document.getElementById("nameshow").style.display="block";
-                        document.getElementById("nametxt").disabled = true;
-                        document.getElementById("entrnme").disabled = true;
-                        document.getElementById("nametxt").style.display="none";
-                        document.getElementById("entrnme").style.display="none";
-                     } 
-                  }, 1500);
-            } 
-            function startGame(){
-               snd1.pause();
-               document.getElementById("sub").style.display="none";
-               document.getElementById("scrn2").style.display="none";
-               fadein1();
+            if (targetelement.mozRequestFullScreen)
+            {
+               targetelement.mozRequestFullScreen();
             }
-            function startGametrue(){
-               snd1.pause();
-               document.getElementById("scrn1").style.display="none";
-               document.getElementById("wrn").style.display="none";
-               document.getElementById("mainG1").style.display="none";
-               fadein1();
+            if (targetelement.msRequestFullscreen)
+            {
+               targetelement.msRequestFullscreen();
             }
-            function Continue(){
-                  document.getElementById("namediv1").textContent= localStorage.getItem('name');
-                  startGametrue();
-               
-            }
-            function back(){
-               window.location.reload();
+         }  
+         function next1(){
+            document.getElementById("scrn1").style.display="none";
+            document.getElementById("scrn2").style.display="block";
+         }
+         var textInputElement = document.getElementById('nametxt');
+         nameDivElement = document.getElementById('namediv');
+         function entername() {
+            setTimeout(
+               function() {
+                  localStorage.setItem('name',document.getElementById("nametxt").value);
+                  var text = textInputElement.value;
+                  nameDivElement.innerHTML = text;
+                  document.getElementById('namediv1').innerHTML= text;
+                  if(text=="kekw"){
+                     kekw();
+                  }
+                  if(text=="dookieballs"){
+                     FDB();
+
+                  }
+                  if(text==""){
+
+                     back();
+
+                  }
+                  if(text=="bobux"){
+                     bobux();
+                     setTimeout(
+                        function() {
+                           window.location.reload();
+                        }, 10065);
+                  }if(text!="bobux"|"kekw"){
+                     document.getElementById("sub").style.display="block";
+                     document.getElementById("nameshow").style.display="block";
+                     document.getElementById("nametxt").disabled = true;
+                     document.getElementById("entrnme").disabled = true;
+                     document.getElementById("nametxt").style.display="none";
+                     document.getElementById("entrnme").style.display="none";
+                  } 
+               }, 1500);
+         } 
+         function startGame(){
+            snd1.pause();
+            document.getElementById("sub").style.display="none";
+            document.getElementById("scrn2").style.display="none";
+            fadein1();
+         }
+         function startGametrue(){
+            snd1.pause();
+            document.getElementById("scrn1").style.display="none";
+            document.getElementById("wrn").style.display="none";
+            document.getElementById("mainG1").style.display="none";
+            fadein1();
+         }
+         function Continue(){
+            document.getElementById("namediv1").textContent= localStorage.getItem('name');
+            startGametrue();
+
+         }
+                  function reset(){
+           setTimeout(
+               function() {
+                  localStorage.removeItem('name');
+               document.getElementById("block1").style.display = "none";
+               document.getElementById("block1").disabled = true;
+               document.getElementById("block2").style.display = "none";
+               document.getElementById("block2").disabled = true;
+               }, 1500);
+         }
+         function back(){
+            window.location.reload();
          }
          function showNext1(){
-            document.getElementById("sc1").style.display="none";
-            document.getElementById("sc2").style.display="block";
+            setTimeout(
+               function() {
+                  document.getElementById("sc1").style.display="none";
+                  document.getElementById("sc2").style.display="block";
+               }, 1000); 
+
          }
          function showNext2(){
-            document.getElementById("sc2").style.display="none";
-            document.getElementById("sc3").style.display="block";
+            setTimeout(
+               function() {
+                  document.getElementById("sc2").style.display="none";
+                  document.getElementById("sc3").style.display="block";
+               }, 1000); 
          }
-         function showNext3(){            
-            document.getElementById("sc3").style.display="none";
+         function showNext3(){       
+            setTimeout(
+               function() {
+                  document.getElementById("sc3").style.display="none";
+               }, 2000); 
             //startgamefr();
          }
       </script>
