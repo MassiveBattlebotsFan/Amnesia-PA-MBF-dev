@@ -252,7 +252,7 @@ function update() {
           //next level
           } else {
                //next level
-          }
+          
         }
         if(powerup[j].stay!==true)
         powerup[j].width=0;//make power up go away
