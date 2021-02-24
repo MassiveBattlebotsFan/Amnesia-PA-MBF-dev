@@ -1,5 +1,6 @@
 
 
+
 (function () {
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     window.requestAnimationFrame = requestAnimationFrame;
@@ -248,8 +249,12 @@ function update() {
           player.y=powerup[j].py;
         }
         else if (powerup[j].effect==='win'){
-          console.log("this is where you get teleported to the next level");
+          var r = confirm("You win! Play again?");
+          if (r == false) {
+               player.x=200;
+               player.y=200;
           } else {
+               window.location.href = window.location.href;
           }
         }
         if(powerup[j].stay!==true)
@@ -259,7 +264,7 @@ function update() {
     //powerup stuff
 
     requestAnimationFrame(update);
-
+}
 
 function colCheck(shapeA, shapeB) {
     // get the vectors to check against
@@ -308,3 +313,5 @@ document.body.addEventListener("keyup", function (e) {
 window.addEventListener("load", function () {
     update();
 });
+
+   
