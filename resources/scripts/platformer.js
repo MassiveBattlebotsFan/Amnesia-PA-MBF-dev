@@ -87,7 +87,7 @@ boxes.push({//box for the ground
     y: height - 10,
     width: width,
     height: 50,
-    color: 'black'
+    color: 'white'
 });
 boxes.push({//box on right
     x: width - 10,
@@ -122,14 +122,14 @@ boxes.push({
     y: 300,
     width: 80,
     height: 10,
-    color: 'black'
+    color: 'white'
 });
 boxes.push({
     x: 340,
     y: 350,
     width: 90,
     height: 10,
-    color: 'black'
+    color: 'white'
 });
 boxes.push({
     x: 740,
