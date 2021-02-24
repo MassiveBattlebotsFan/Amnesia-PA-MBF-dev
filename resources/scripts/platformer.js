@@ -61,7 +61,7 @@ powerup.push({
         y: 365,
         width: 20,
         height: 20,
-        color: '#2A5D77',
+        color: 'red',
         effect: 'win',
         stay: true
     });
