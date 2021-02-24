@@ -141,7 +141,7 @@
       </div>
       <br><br><br><br><br><br><br><br>
       <div style="text-align: center">
-         <input style="text-align: center;"type="text" id="nametxt" class="nametxt"maxlength="11"><br><br>
+         <input style="text-align: center;"type="text" id="nametxt" class="nametxt"maxlength="11" minlength="2"><br><br>
       </div>
       <div style="text-align: center">
          <button  id="entrnme"  style="text-align: center;" class="stbtn"onClick="entername(),this.style.display='none'"><p10>Enter Name</p10></button>
@@ -184,7 +184,7 @@
          let name = localStorage.getItem('name');
          console.log(localStorage.getItem('name'));
 		 console.log("this is an HTML game by lieutenantlark, with assistance from MBF/Team Lightning and renox.")
-		 console.log("if buttons do not appear run 'localStorage.removeItem('name');' in the console without the quotes, then press f5")
+
          if(localStorage.getItem('name')==null||localStorage.getItem('name')==""){
             document.getElementById("block1").style.display = "none";
             document.getElementById("block1").disabled = true;
@@ -228,7 +228,9 @@
             }, 1000);
       }
       function next(){
-
+if(text == "teaml" or text == "lark"){
+                    console.log("DEV MODE ON");
+}
 
          document.getElementById("wrn").style.display="none";
          document.getElementById("scrn1").style.display="block";
@@ -270,8 +272,9 @@
 
                }
                if(text==""){
-                  localStorage.removeItem('name');
-				  window.location.reload();
+
+                  back();
+
                }
                if(text=="bobux"){
                   bobux();
