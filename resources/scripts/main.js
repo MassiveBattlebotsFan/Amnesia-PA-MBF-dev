@@ -137,6 +137,7 @@ function reset () {
                  document.getElementById('block2').disabled = true
                }, 10)
 }
+
 function back () {
   window.location.reload()
 }
