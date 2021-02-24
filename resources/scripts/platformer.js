@@ -20,7 +20,7 @@ var canvas = document.getElementById("canvas"),
         velY: 0,
         jumping: false,
         grounded: false,
-        color:'#E6AC27'
+        color:'white'
     },
     keys = [],
     friction = 0.8,
@@ -33,7 +33,7 @@ powerup.push({
         y: 250,
         width: 20,
         height: 20,
-        color: '#BF4D28',
+        color: 'white',
         effect: 'shrink'
     });
 powerup.push({
@@ -41,7 +41,7 @@ powerup.push({
         y: 150,
         width: 20,
         height: 20,
-        color: '#BF4D28',
+        color: 'white',
         effect: 'gravity'
     });
 powerup.push({
@@ -72,42 +72,42 @@ boxes.push({//box on left
     y: height/4+10,
     width: 10,
     height: height,
-    color: 'green'
+    color: 'black'
 });
 boxes.push({//box on left
     x: 0,
     y: 0,
     width: 10,
     height: height/4-15,
-    color: 'green'
+    color: 'black'
 });
 boxes.push({//box for the ground
     x: 0,
     y: height - 10,
     width: width,
     height: 50,
-    color: 'orange'
+    color: 'black'
 });
 boxes.push({//box on right
     x: width - 10,
     y: 0,
     width: 50,
     height: height,
-    color: 'yellow'
+    color: 'white'
 });
 boxes.push({
     x: 290,
     y: 200,
     width: 260,
     height: 10,
-    color: 'blue'
+    color: 'white'
 });
 boxes.push({
     x: 590,
     y: 200,
     width: 80,
     height: 10,
-    color: 'blue'
+    color: 'white'
 });
 boxes.push({
     x: 120,
@@ -128,28 +128,28 @@ boxes.push({
     y: 350,
     width: 90,
     height: 10,
-    color: '#655643'
+    color: 'black'
 });
 boxes.push({
     x: 740,
     y: 300,
     width: 160,
     height: 10,
-    color: '#655643'
+    color: 'black'
 });
 boxes.push({
     x: 0,
     y: 350,
     width: 90,
     height: 10,
-    color: '#655643'
+    color: 'black'
 });
 boxes.push({
     x: 90,
     y: 350,
     width: 10,
     height: 50,
-    color: '#655643'
+    color: 'black'
 });
 
 canvas.width = width;
