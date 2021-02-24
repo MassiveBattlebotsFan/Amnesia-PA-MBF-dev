@@ -227,11 +227,6 @@
                document.getElementById("mainG1").style.display="block";
             }, 1000);
       }
-      function next(){
-if(text == "teaml" or text == "lark"){
-                    console.log("DEV MODE ON");
-}
-
          document.getElementById("wrn").style.display="none";
          document.getElementById("scrn1").style.display="block";
          snd1.play();
@@ -264,6 +259,10 @@ if(text == "teaml" or text == "lark"){
                var text = textInputElement.value;
                nameDivElement.innerHTML = text;
                document.getElementById('namediv1').innerHTML= text;
+      function next(){
+if(text == "teaml" or text == "lark"){
+                    console.log("DEV MODE ON");
+}
                if(text=="kekw"){
                   kekw();
                }
