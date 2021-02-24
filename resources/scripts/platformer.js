@@ -150,7 +150,7 @@ boxes.push({
     y: 350,
     width: 10,
     height: 50,
-    color: 'black'
+    color: 'white'
 });
 
 canvas.width = width;
