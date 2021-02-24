@@ -2,6 +2,7 @@ window.onload = function () {
   localStorage.getItem(document.getElementById('nametxt').value)
   let name = localStorage.getItem('name')
   let dev = localStorage.getItem('dev')
+  let savegame = localStorage.getItem('savegame')
   dev = false
   console.log('This is an HTML game by lieutenantlark, with assistance from MBF/Team Lightning and renox.')
   console.log("If buttons do not appear run 'clearStorage();' in the console without the quotes.")
@@ -129,6 +130,7 @@ function reset () {
                function () {
                  document.getElementById('s1').style.display = 'inline-block'
                  localStorage.removeItem('name')
+                 localStorage.removeItem('savegame')
                  document.getElementById('block1').style.display = 'none'
                  document.getElementById('block1').disabled = true
                  document.getElementById('block2').style.display = 'none'
