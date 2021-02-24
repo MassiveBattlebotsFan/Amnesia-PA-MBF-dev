@@ -135,14 +135,14 @@ boxes.push({
     y: 300,
     width: 160,
     height: 10,
-    color: 'black'
+    color: 'white'
 });
 boxes.push({
     x: 0,
     y: 350,
     width: 90,
     height: 10,
-    color: 'black'
+    color: 'white'
 });
 boxes.push({
     x: 90,
