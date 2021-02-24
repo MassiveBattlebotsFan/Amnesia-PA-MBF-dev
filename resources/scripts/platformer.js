@@ -72,14 +72,14 @@ boxes.push({//box on left
     y: height/4+10,
     width: 10,
     height: height,
-    color: 'black'
+    color: 'white'
 });
 boxes.push({//box on left
     x: 0,
     y: 0,
     width: 10,
     height: height/4-15,
-    color: 'black'
+    color: 'white'
 });
 boxes.push({//box for the ground
     x: 0,
