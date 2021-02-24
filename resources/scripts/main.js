@@ -3,8 +3,8 @@ window.onload = function () {
   let name = localStorage.getItem('name')
   let dev = localStorage.getItem('dev')
   dev = false
-  console.log('this is an HTML game by lieutenantlark, with assistance from MBF/Team Lightning and renox.')
-  console.log("if buttons do not appear run 'localStorage.removeItem('name');' in the console without the quotes, then press f5")
+  console.log('This is an HTML game by lieutenantlark, with assistance from MBF/Team Lightning and renox.')
+  console.log("If buttons do not appear run 'clearStorage();' in the console without the quotes.")
   console.log('Name:', name, 'Dev mode:', dev)
   if (name == null || name == '') {
     document.getElementById('block1').style.display = 'none'
