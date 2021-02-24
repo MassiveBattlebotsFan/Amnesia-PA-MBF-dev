@@ -249,9 +249,9 @@ function update() {
           player.y=powerup[j].py;
         }
         else if (powerup[j].effect==='win'){
-          //next level
+          document.getElementById("canvas").style.display="none";
           } else {
-               //next level
+               document.getElementById("canvas").style.display="none";
           
         }
         if(powerup[j].stay!==true)
