@@ -10,6 +10,7 @@ var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d"),
     width = 1000,
     height = 400,
+color: 'white',
     player = {
         x: width / 2,
         y: 200,
