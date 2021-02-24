@@ -165,7 +165,7 @@ function showNext3 () {
 function startgamefr () {
   setTimeout(
                function () {
-                 document.getElementById('game').style.display = 'unset'
+                 document.getElementById('game').style.display = 'inline-block'
                  document.getElementById('mainG1').style.display = 'none'
                }, 2000)
 }
