@@ -248,12 +248,8 @@ function update() {
           player.y=powerup[j].py;
         }
         else if (powerup[j].effect==='win'){
-          var r = confirm("You win! Play again?");
-          if (r == false) {
-               player.x=200;
-               player.y=200;
+          console.log("this is where you get teleported to the next level");
           } else {
-               window.location.href = window.location.href;
           }
         }
         if(powerup[j].stay!==true)
