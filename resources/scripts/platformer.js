@@ -259,7 +259,7 @@ function update() {
     //powerup stuff
 
     requestAnimationFrame(update);
-}
+
 
 function colCheck(shapeA, shapeB) {
     // get the vectors to check against
