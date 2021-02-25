@@ -1,6 +1,3 @@
-
-
-
 (function () {
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     window.requestAnimationFrame = requestAnimationFrame;
@@ -251,8 +248,10 @@ function update() {
         }
         else if (powerup[j].effect==='win'){
           document.getElementById("canvas").style.display="none";
+              cred1();
           } else {
                document.getElementById("canvas").style.display="none";
+
           
         }
         if(powerup[j].stay!==true)
