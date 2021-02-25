@@ -4,7 +4,7 @@ window.onload = function () {
   let dev = localStorage.getItem('dev')
   let savegame = localStorage.getItem('savegame')
   dev = false
-  console.log('This is an HTML game by lieutenantlark, with assistance from MBF/Team Lightning and renox.')
+  console.log('This is an HTML game by Team L&sup2;, with assistance from renox.')
   console.log("If buttons do not appear run 'clearStorage();' in the console without the quotes.")
   console.log('Name:', name, 'Dev mode:', dev)
   if (name == null || name == '') {
