@@ -1,194 +1,195 @@
 
 <html>
-   <title>Amnesia DEV</title>
-   <head>
-      <meta charset='UTF8'>
-      <style>
+<title>Amnesia DEV</title>
+<head>
+   <meta charset='UTF8'>
+   <style>
 
 
 #canvas{
 text-align: center;
-    background: 'white'; 
+ background: 'white'; 
 }
-      head, body{
-         background: #000000;
-      }
-      p1{
-         color: #66ff66;
-         font-size: 150px;
-         font-family: 'retro';
-         top: 50px;
-         letter-spacing: 1px;
-         -webkit-user-select: none;
-         -khtml-user-select: none;
-         -moz-user-select: none;
-         -ms-user-select: none;
-         user-select: none;
-      }
-      p2{
-         color: #66ff55;
-         font-size: 30px;
-         font-family: 'retro';
-         -webkit-user-select: none;
-         -khtml-user-select: none;
-         -moz-user-select: none;
-         -ms-user-select: none;
-         user-select: none;
-      }
-      p10{
-         color: #66ff55;
-         font-size: 50px;
-         font-family: 'retro';
-         -webkit-user-select: none;
-         -khtml-user-select: none;
-         -moz-user-select: none;
-         -ms-user-select: none;
-         user-select: none;
-      }
-      p4{
-         color: #66ff66;
-         font-size: 50px;
-         font-family: 'retro';
-         letter-spacing: 1px;
-         -webkit-user-select: none;
-         -khtml-user-select: none;
-         -moz-user-select: none;
-         -ms-user-select: none;
-         user-select: none;
-      }
-      p9{
-         color: #66ff66;
-         font-size: 30px;
-         font-family: 'retro';
-         letter-spacing: 1px;
-         -webkit-user-select: none;
-         -khtml-user-select: none;
-         -moz-user-select: none;
-         -ms-user-select: none;
-         user-select: none;
-      }
-      @font-face {
-         font-family: retro;
-         src: url(resources/fonts/retro.ttf);
-      }
-      .test{
-         text-align: center;
-      }
-      .stbtn,.setbtn,.ntr{
-         border: none;
-         background: transparent;
-         outline: none;
-         transition: 800ms;
-      }
-      .stbtn:hover,.setbtn:hover,.ntr:hover{
-         letter-spacing: 10px ;
-         cursor: pointer;
-      }
-      .nametxt{
-         font-size: 50px;
-         color: lightgreen;
-         border: 3px solid #66FF55;
-         background: transparent;
-         width: 400px;
-         height: 50px;
-         text-align: center;
-         border-radius:100px;
-      }
-      .nametxt:focus{
-         outline: none;
-      }
-      .button1,.button2,.button3{
-         position:absolute;
-         top:0;
-         left:0;
-         bottom:0;
-         right:0;
-         height:100%;
-         width:100%;
-      }
-      </style>
-   </head>
-   <body>
-      <div style="display:flex; flex-direction: column;"id="wrn">
-         <div style="text-align:center;">
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <p4>WARNING</p4>
-         </div>
-         <div style="text-align:center;">
-            <p9>The following game may induce epilepsy.</p9>
-            <br>
-            <p9>Play at your own risk.</p9>
-         </div>
-         <div style="text-align: center">
-            <br>
-            <button class="stbtn" onClick="next();"value="Start"><p2>GO</p2></button>
-            <br><br>
-         </div>
+   head, body{
+      background: #000000;
+   }
+   p1{
+      color: #66ff66;
+      font-size: 150px;
+      font-family: 'retro';
+      top: 50px;
+      letter-spacing: 1px;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+   }
+   p2{
+      color: #66ff55;
+      font-size: 30px;
+      font-family: 'retro';
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+   }
+   p10{
+      color: #66ff55;
+      font-size: 50px;
+      font-family: 'retro';
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+   }
+   p4{
+      color: #66ff66;
+      font-size: 50px;
+      font-family: 'retro';
+      letter-spacing: 1px;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+   }
+   p9{
+      color: #66ff66;
+      font-size: 30px;
+      font-family: 'retro';
+      letter-spacing: 1px;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+   }
+   @font-face {
+      font-family: retro;
+      src: url(resources/fonts/retro.ttf);
+   }
+   .test{
+      text-align: center;
+   }
+   .stbtn,.setbtn,.ntr{
+      border: none;
+      background: transparent;
+      outline: none;
+      transition: 800ms;
+   }
+   .stbtn:hover,.setbtn:hover,.ntr:hover{
+      letter-spacing: 10px ;
+      cursor: pointer;
+   }
+   .nametxt{
+      font-size: 50px;
+      color: lightgreen;
+      border: 3px solid #66FF55;
+      background: transparent;
+      width: 400px;
+      height: 50px;
+      text-align: center;
+      border-radius:100px;
+   }
+   .nametxt:focus{
+      outline: none;
+   }
+   .button1,.button2,.button3{
+      position:absolute;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      height:100%;
+      width:100%;
+   }
+   </style>
+</head>
+<body>
+   <div style="display:flex; flex-direction: column;"id="wrn">
+      <div style="text-align:center;">
+         <br><br><br><br><br><br><br><br><br><br><br>
+         <p4>WARNING</p4>
+      </div>
+      <div style="text-align:center;">
+         <p9>The following game may induce epilepsy.</p9>
+         <br>
+         <p9>Play at your own risk.</p9>
+      </div>
+      <div style="text-align: center">
+         <br>
+         <button class="stbtn" onClick="next();"value="Start"><p2>GO</p2></button>
+         <br><br>
+      </div>
+      <br>
+   </div>
+
+   <div id="scrn1" style="display: none; flex-direction: column;">
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <div style="text-align: center;">
+         <p1><span  id="wname"></span></p1>
          <br>
       </div>
+      <div style="text-align: center;"class="test">
+         <button class="stbtn" id="s1"onClick="next1();"><p10>Start Game</p10></button>
 
-      <div id="scrn1" style="display: none; flex-direction: column;">
-         <br><br><br><br><br><br><br><br><br><br><br><br>
-         <div style="text-align: center;">
-            <p1><span  id="wname"></span></p1>
-            <br>
-         </div>
-         <div style="text-align: center;"class="test">
-            <button class="stbtn" id="s1"onClick="next1();"><p10>Start Game</p10></button>
+         <button class="setbtn" style="disabled display: none;"id="block1"onClick = "Continue();"><p10>Continue</p10></button><br><br>
+         <button class="setbtn" style="disabled display: none;"id="block2"onClick = "reset();"><p10>Reset Game</p10></button>
+      </div>
+      <br>
+   </div>
 
-            <button class="setbtn" style="disabled display: none;"id="block1"onClick = "Continue();"><p10>Continue</p10></button><br><br>
-            <button class="setbtn" style="disabled display: none;"id="block2"onClick = "reset();"><p10>Reset Game</p10></button>
-         </div>
+   <div id="scrn2" style="display: none; flex-direction: column;">
+      <br><br><br><br><br><br>
+      <div id="nameshow" style="display: none; text-align: center;">
+         <p10>Your name is  "<p10><span id="namediv"></span></p10>" <br><br>(you cannot change this later)</p10>
+      </div>
+      <br><br><br><br><br><br><br><br>
+      <div style="text-align: center">
+         <input style="text-align: center;"type="text" id="nametxt" class="nametxt"maxlength="11"><br><br>
+      </div>
+      <div style="text-align: center">
+         <button  id="entrnme"  style="text-align: center;" class="stbtn"onClick="entername(),this.style.display='none'"><p10>Enter Name</p10></button>
          <br>
       </div>
+      <div id="sub" style="display:none; text-align:center">
+         <button style="text-align: center;" class="stbtn" id="cont"onClick="startGame();"><p10>Continue</p10></button><br>
 
-      <div id="scrn2" style="display: none; flex-direction: column;">
-         <br><br><br><br><br><br>
-         <div id="nameshow" style="display: none; text-align: center;">
-            <p10>Your name is  "<p10><span id="namediv"></span></p10>" <br><br>(you cannot change this later)</p10>
-         </div>
-         <br><br><br><br><br><br><br><br>
-         <div style="text-align: center">
-            <input style="text-align: center;"type="text" id="nametxt" class="nametxt"maxlength="11"><br><br>
-         </div>
-         <div style="text-align: center">
-            <button  id="entrnme"  style="text-align: center;" class="stbtn"onClick="entername(),this.style.display='none'"><p10>Enter Name</p10></button>
-            <br>
-         </div>
-         <div id="sub" style="display:none; text-align:center">
-            <button style="text-align: center;" class="stbtn" id="cont"onClick="startGame();"><p10>Continue</p10></button><br>
+      </div>
+   </div>
 
+   <div id="mainG1" style="display: none; text-align: center;">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+      <div id = "sc1"style="text-align: center;">
+         <p10>My name is <br><span id="namediv1"></span></p10><br>
+         <div class="button1" onClick="showNext1();">
          </div>
       </div>
 
-      <div id="mainG1" style="display: none; text-align: center;">
-         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-         <div id = "sc1"style="text-align: center;">
-            <p10>My name is <br><span id="namediv1"></span></p10><br>
-            <div class="button1" onClick="showNext1();">
-            </div>
-         </div>
-
-         <div id= "sc2"style="display: none;text-align: center;">
-            <p10>I know that.</p10><br>
-            <div class="button2" onClick="showNext2();">
-            </div>
-         </div>
-
-         <div id= "sc3"style="display: none;text-align: center;">
-            <p10>But why do I forget?</p10>
-            <div class="button3" onClick="showNext3();">
-            </div>
+      <div id= "sc2"style="display: none;text-align: center;">
+         <p10>I know that.</p10><br>
+         <div class="button2" onClick="showNext2();">
          </div>
       </div>
-      <div id="game" style="display: none;flex-firection: column;">
- <br><br><br><br><br><br><br>
 
+      <div id= "sc3"style="display: none;text-align: center;">
+         <p10>But why do I forget?</p10>
+         <div class="button3" onClick="showNext3();">
+         </div>
+      </div>
+   </div>
+   <div id="game" style="display: none;flex-firection: column;">
+<br><br><br><br><br><br><br>
+<div style="text-align: center;">
 <canvas id="canvas">
-    </div>
-         <script src="resources/scripts/main.js"></script>
-    <script src="resources/scripts/platformer.js">
-         </script>
-   </body>
+</div>
+ </div>
+      <script src="resources/scripts/main.js"></script>
+ <script src="resources/scripts/platformer.js">
+      </script>
+</body>
 </html>
