@@ -162,6 +162,14 @@ function showNext3 () {
       }, 2000)
    startgamefr()
 }
+
+// game
+function clearStorage () {
+   localStorage.removeItem('name')
+   localStorage.removeItem('dev')
+   window.location.reload()
+}
+//text between level 1 and 2
 function showNext4 () {
    setTimeout(
       function () {
@@ -169,6 +177,7 @@ function showNext4 () {
       }, 2000)
    lev2();
 }
+//hides text between menu and level 1, starts level 1
 function startgamefr () {
    setTimeout(
       function () {
@@ -176,6 +185,7 @@ function startgamefr () {
          document.getElementById('mainG1').style.display = 'none'
       }, 2000)
 }
+//"a game by team L2"
 function cred1(){
    setTimeout(
       function () {
@@ -183,13 +193,8 @@ function cred1(){
       }, 2000)
 
 }
+//level 2
 function lev2(){
 document.getElementById('C1').style.display = 'none';
 document.getElementById('Lev2').style.display = 'block';
-}
-// game
-function clearStorage () {
-   localStorage.removeItem('name')
-   localStorage.removeItem('dev')
-   window.location.reload()
 }
