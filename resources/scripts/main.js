@@ -18,7 +18,8 @@ window.onload = function () {
       document.getElementById('s1').style.display = 'none'
    }
 }
-document.addEventListener('contextmenu', event => event.preventDefault());
+//disable right click
+//document.addEventListener('contextmenu', event => event.preventDefault());
 document.getElementById('wname').textContent = 'AMNESIA'
 var snd1 = new Audio('resources/audio/mainambient.mp3')
 var snd2 = new Audio('resources/audio/NGGUU.mp3')
