@@ -189,7 +189,7 @@ function startgamefr () {
 }
 //"a game by team L2"
 function cred1(){
-  document.getElementById('intro').currentTime = 0;
+  document.getElementById('intro').load();
   document.getElementById('intro').play();
    setTimeout(
       function () {
