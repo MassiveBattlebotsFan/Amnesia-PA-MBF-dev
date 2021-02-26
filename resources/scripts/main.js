@@ -46,15 +46,15 @@ function fadein1 () {
    setTimeout(
       function () {
          document.getElementById('mainG1').style.display = 'block'
-      }, 1000)
+      }, 1000);
 }
 function next () {
-   document.getElementById('wrn').style.display = 'none'
-   document.getElementById('scrn1').style.display = 'block'
-   snd1.play()
-   snd1.volume = 0.25
-   snd1.loop = true
-   var targetelement = document.documentElement
+   document.getElementById('wrn').style.display = 'none';
+   document.getElementById('scrn1').style.display = 'block';
+   snd1.play();
+   snd1.volume = 0.25;
+   snd1.loop = true;
+   var targetelement = document.documentElement;
    if (targetelement.requestFullscreen) {
       targetelement.requestFullscreen()
    }
@@ -189,6 +189,8 @@ function startgamefr () {
 }
 //"a game by team L2"
 function cred1(){
+  document.getElementById('intro').currentTime = 0;
+  document.getElementById('intro').play();
    setTimeout(
       function () {
          document.getElementById('C1').style.display = 'block'
