@@ -1,0 +1,112 @@
+.comment{
+display: none;
+      }
+.videosize {
+ position: absolute;
+ z-index: 99;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+      .canvas{
+         align-items: center;
+
+      }
+      head, body{
+         background: #000000;
+      }
+      p1{
+         color: #66ff66;
+         font-size: 150px;
+         font-family: 'retro';
+         top: 50px;
+         letter-spacing: 1px;
+         -webkit-user-select: none;
+         -khtml-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+      }
+      p2{
+         color: #66ff55;
+         font-size: 30px;
+         font-family: 'retro';
+         -webkit-user-select: none;
+         -khtml-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+      }
+      p10{
+         color: #66ff55;
+         font-size: 50px;
+         font-family: 'retro';
+         -webkit-user-select: none;
+         -khtml-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+      }
+      p4{
+         color: #66ff66;
+         font-size: 50px;
+         font-family: 'retro';
+         letter-spacing: 1px;
+         -webkit-user-select: none;
+         -khtml-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+      }
+      p9{
+         color: #66ff66;
+         font-size: 30px;
+         font-family: 'retro';
+         letter-spacing: 1px;
+         -webkit-user-select: none;
+         -khtml-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+      }
+      @font-face {
+         font-family: retro;
+         src: url(resources/fonts/retro.ttf);
+      }
+      .test{
+         text-align: center;
+      }
+      .stbtn,.setbtn,.ntr{
+         border: none;
+         background: transparent;
+         outline: none;
+         transition: 800ms;
+      }
+      .stbtn:hover,.setbtn:hover,.ntr:hover{
+         letter-spacing: 10px ;
+         cursor: pointer;
+      }
+      .nametxt{
+         font-size: 50px;
+         color: lightgreen;
+         border: 3px solid #66FF55;
+         background: transparent;
+         width: 400px;
+         height: 50px;
+         text-align: center;
+         border-radius:100px;
+      }
+      .nametxt:focus{
+         outline: none;
+      }
+      .button1,.button2,.button3{
+         position:absolute;
+         top:0;
+         left:0;
+         bottom:0;
+         right:0;
+         height:100%;
+         width:100%;
+      }
